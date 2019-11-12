@@ -1,0 +1,376 @@
+/* 1-SETTINGS -> Variaveis*/
+
+
+
+/* 3-GENERICS -> Menor especificação*/
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	
+	box-sizing: border-box;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+/* 4-ELEMENTS -> Elementos*/
+.btn {
+	border: 2px solid rgb(51,51,51);
+	color: rgba(51,51,51,0.9);
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 2px;
+	word-spacing: 5px;
+	transition: 0.5s;
+}
+.btn:hover {
+	color: #FFF;
+  	background-color: rgb(51,51,51);
+}
+.cur {
+	padding: 15px 20px;
+}
+.social {
+	padding: 15px 30px;
+}
+.email {
+	font-size: 20px;
+	width: 275px;
+	margin: 0 auto;
+	color: rgb(25,25,25);
+	font-style: italic;
+	border-bottom: 1px dashed rgba(25,25,25,0.4);
+	display: block;
+	margin-bottom: 50px;
+}
+.fab {
+	margin-right: 10px;
+}
+
+/* 5-OBJECTS -> Classes de estruturas*/
+	/* CABEÇALHO */
+.cabecalho {
+	width: 100%;
+	height: 70px;
+	display: flex;
+	flex-wrap: wrap;	
+	align-items: center;
+	justify-content: space-around;
+	z-index: 1;	
+	margin-bottom: -120px;
+	transition: .5s;
+
+	/*
+	*/
+}
+	/* BANNER */
+.banner {
+	background: url('../img/nuvem.png'),url('../img/nuvem2.png'),url('../img/banner20.jpg');
+	background-repeat: repeat-x,repeat-x, no-repeat;
+	background-size: cover,cover,auto;
+
+	background-attachment: fixed;
+	background-position: center;
+
+
+
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: fundo-animado 10s backwards infinite linear;
+	animation-direction: alternate;
+	
+}
+
+@keyframes fundo-animado {
+	0%{
+		background-position: 0 0, 95% 90%,0 0;
+	}
+	50%{
+		background-position: 50% 0, 60% 70%,0 0;
+	}
+	100%{
+		background-position: 100% 0, 20% 10%, 0 0;
+	}
+
+}
+.banner-content {
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	
+}
+
+	/* POSTS */
+.post {
+	text-align: center;
+	padding: 7% 20% 7% 20%;
+}
+	
+#rodape {
+	background-color: black;
+	color: white;
+	width: 100%;
+	height: 120px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/* 6-COMPONENTS -> Classes de Estilizações Especificas*/
+	/*Cabeçalho*/
+.cabecalho h1{
+	font-weight: bold;
+	font-family: Montserrat;
+	font-size: 20px;
+	color: white;
+	text-transform: uppercase;
+}
+.cabecalho li{
+	display: inline-block;
+}
+.cabecalho a {
+	color: white;
+	font-family: Montserrat;
+	font-size: 13px;
+	font-weight: 300;
+	margin-left: 25px;
+	padding: 10px;
+	text-transform: uppercase;
+	transition: all .5s ease-in-out;
+}
+.cabecalho a:hover {
+	color: rgb(104, 243, 243);
+	font-weight: 700;
+	border-top: solid 3px rgba(104, 243, 243, .3);
+	border-radius: 50%;
+}
+
+/* banner */
+.banner-content h2{
+	color: white;
+	font-size: 60px;
+	text-transform: uppercase;
+	border-top: 2px solid white; 
+	border-bottom: 2px solid white; 
+	position: relative;
+	animation: entrando 5s infinite alternate-reverse;
+
+}
+
+@keyframes entrando {
+	0%{
+		opacity: 1;
+		color: cyan;
+		
+	}
+	100%{
+		border-color: rgba(10, 247, 247, 0.671);
+		opacity: .3;	
+
+	}
+}
+.banner-content p {
+	margin-top: 10px;
+	color: white;
+	font-size: 20px;
+	letter-spacing: 3px;
+	animation: entrando 2s infinite alternate-reverse;
+	
+	
+}
+.banner-content a {
+	border: 2px solid white;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-top: 40px;
+	transition: 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 20px;
+}
+.banner-content a:hover {
+	background-color: rgba(255,255,255,0.2); 
+}
+
+.post h1 {
+	text-transform: uppercase;
+	font-size: 35px;
+	color: rgb(51,51,51);
+	margin-bottom: 5%;
+}
+.post p {
+	font-size: 20px;
+	color: rgba(51,51,51,0.9);
+	font-weight: 300;
+	line-height: 30px;
+	margin-bottom: 7%;
+	letter-spacing: 0.8px;
+}
+#rodape p{
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 2px;
+}
+#rodape a {
+	color: rgb(25,25,25);
+	border-bottom: 1px dashed rgba(255,255,255,0.6);
+	color: white;
+}
+
+
+
+
+
+/* 7-TRUMPS -> !important e ID's */
+#container {
+	display: flex;
+	max-width: 1920px;
+	width: 100%;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+
+
+
+
+#gallery {
+	padding: 5px 0 0 0; 
+	background-color: black; 
+}
+#gallery ul{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 -4.4px 0;
+	padding: 0;
+	width: 100%;
+}
+#gallery li{
+	flex: auto;
+	width: 20%; 
+	min-width: 300px;
+	margin-top: -5.6px;
+	list-style: none;
+}
+#gallery li img{
+	width: 100%;
+	height: auto;
+	opacity: 0.5;
+	transition: 1s;
+}
+
+#gallery  a:hover img{
+	opacity: 1;
+	filter: alpha(opacity=80);
+}
+
+
+
+.menu-fixo {
+	position: sticky;
+	top: 0;
+	background: black;
+	height: 50px; 
+	animation-duration: 2s;
+	animation-timing-function: ease-out;
+	animation-name: aparecer;
+}
+@keyframes aparecer {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
+	25%{
+		visibility: visible;
+		opacity: .5;
+	}
+	50%{
+		height: 75px;
+		opacity: .8;
+	}
+	100%{
+		height: 50px;
+		opacity: 1;
+	}
+}
+
+
+.content {
+	
+	vertical-align: center;
+	color: #ecf0f1;
+	height: 160px;
+	overflow: hidden;
+	line-height: 40px;
+	
+  }
+  .content p {
+	margin: 0;
+  }
+  .visible {
+	font-weight: 600;
+	overflow: hidden;
+	height: 30px;
+	padding: 0 30px;
+	
+	display: flex;
+	
+	
+  }
+  
+  .visible ul {
+	
+
+	animation: 6s linear 0s normal none infinite change;
+
+  }
+  
+  .visible ul li {
+	
+	line-height: 25px;
+  }
+  
+  @keyframes opacity {
+	0%, 100% {
+	  opacity: 0;
+	}
+	50% {
+	  opacity: 1;
+	}
+  }
+  @keyframes change {
+	0%, 12%, 100% {
+	  transform: translateY(0);
+	}
+	17%,29% {
+	  transform: translateY(-25%);
+	}
+	34%,46% {
+	  transform: translateY(-50%);
+	}
+	51%,63% {
+	  transform: translateY(-75%);
+	}
+	68%,80% {
+	  transform: translateY(-50%);
+	}
+	85%,97% {
+	  transform: translateY(-25%);
+	}
+  }
+  

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PortFolio</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:300i,400,400i,600,600i,700,800&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/6886b99fe4.js"></script>
+</head>
+<body>
+	<div id="container">
+		<!-- Cabeçalho -->
+		<header class="cabecalho">
+			<h1>Gabriel</h1>
+			<nav>
+				<ul>
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Projetos</a></li>
+					<li><a href="#">Mais</a></li>
+					<li><a href="#">SobreMim</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- imagem fundo banner -->
+		<section class="banner" >
+			<span class="banner-content">
+				<h2>Portfólio</h2>
+				<p>Desenvolvedor: FullStack </p>
+				<a href="#"><i class="fas fa-angle-double-down"></i></a>
+			</span>
+		</section>
+
+		<!-- seção sobre -- -->
+		<section class="post">
+			<h1>Sobre Mim</h1>
+			<p>
+				Me Chamo Gabriel, tenho 21 anos e estou me graduando em Engenharia da Computação,
+				amo programar e tenho como hobby o design, responsavel e sempre disposto a aprender mais.
+			</p>
+			<a class="btn cur" href="#">
+		    	<i class="fas fa-save"></i>
+		    	Meu Curriculo!
+		    </a>
+		</section>
+		
+		<section id="gallery">
+			
+			<ul>
+				<li><a href="#>"><img class="photo" src="img/photo1.jpg"></a></li>
+				<li><a href="#>"><img class="photo" src="img/photo2.jpg"></a></li>
+				<li><a href="#>"><img class="photo" src="img/photo3.jpg"></a></li>
+				<li><a href="#>"><img class="photo" src="img/photo4.jpg"></a></li>
+				<li><a href="#>"><img class="photo" src="img/photo5.jpg"></a></li>
+				<li><a href="#>"><img class="photo" src="img/photo6.jpg"></a></li>
+				<li><a href="#>"><img class="photo" src="img/photo7.jpg"></a></li>
+				<li><a href="#>"><img class="photo" src="img/photo8.jpg"></a></li>
+			</ul>
+		</section>
+		<section class="post">
+			<h1>Me Mande uma Mensagem</h1>
+			<p>
+				Se você gostou dos meus trabalhos, e gostaria de acompanhar minhas redes sociais, ou até mesmo
+				solicitar um orçamento, me mande uma mensagem em qualquer canal de comunicação abaixo.
+			</p>
+			<a class="email" href="#">gabrielmussolini@hotmail.com</a>
+			<a class="btn social" href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
+			<a class="btn social" href="#"><i class="fab fa-twitter"></i>Twitter</a>
+			<a class="btn social" href="#"><i class="fab fa-github-alt"></i>GitHub</a>
+		</section>
+		<footer id="rodape">
+			 <p>Copyright © Your Website 2018<br>
+			 	<a href="#">www.gabrielmussolini.com</a>
+			 </p>
+		</footer>
+	</div>
+
+
+	<script>
+		var elmt = document.querySelector('.cabecalho');
+		var bannerElem = document.querySelector('.banner');
+		var bannerContentElem = document.querySelector('.banner-content');
+		function animeScroll(){
+			if (window.scrollY > 0){
+				elmt.classList.remove('cabecalho');
+				elmt.classList.add('cabecalho');
+				elmt.classList.add('menu-fixo');
+				bannerElem.classList.add('lampada');
+			}
+				
+       	 	else
+				elmt.classList.remove('menu-fixo');	
+				elmt.classList.remove('cabecalho');
+				elmt.classList.add('cabecalho');
+		}
+		
+
+		window.addEventListener('scroll', function(){
+			animeScroll();
+		});
+
+		
+		
+	</script>
+</body>
+</html>
